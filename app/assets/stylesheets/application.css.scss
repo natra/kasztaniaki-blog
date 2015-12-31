@@ -1,0 +1,295 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+body {
+  font-family: 'Lora', 'Times New Roman', serif;
+  font-size: 20px;
+  color: #404040;
+}
+h1,
+h2,
+h3{
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+}
+p {
+  line-height: 1.5;
+  margin: 30px 0;
+}
+p a {
+  text-decoration: underline;
+}
+a {
+  color: #404040;
+}
+a:hover,
+a:focus {
+  color: #0085a1;
+}
+
+hr.small {
+  border-width: 4px;
+  border-color: white;
+  max-width: 200px;
+  margin: 17px auto;
+}
+
+.navbar-custom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 800;
+}
+.navbar-custom .nav li a {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+@media only screen and (min-width: 768px) {
+  .navbar-custom {
+    background: transparent;
+    border-bottom: 1px solid transparent;
+  }
+  .navbar-custom .navbar-brand {
+    color: white;
+    padding: 20px;
+  }
+  .navbar-custom .navbar-brand:hover,
+  .navbar-custom .navbar-brand:focus {
+    color: #FFF;
+  }
+  .navbar-custom .nav li a {
+    color: white;
+    padding: 20px 20px 5px 20px;
+  }
+  .navbar-custom .nav li a:hover,
+  .navbar-custom .nav li a:focus {
+    color: #FFF;
+    border-bottom: 3px solid  #0085a1;
+  }
+}
+
+/* PAGER */
+
+.pager li > a,
+.pager li > span {
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 15px 25px;
+  background-color: #404040;
+  border-radius: 0;
+  color: white;
+}
+
+.pager li > a:hover,
+.pager li > a:focus {
+  background-color: #0085a1;
+}
+
+/*TEAM TABLE*/
+
+.gw-team-table td img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gw-team-table span, .res-table span {
+  font: 15px "open sans";
+}
+
+.gw-team-table span {
+  
+  background-color: #0085a1;
+  color: #FFFFFF;
+  padding: 3px;
+}
+
+.gw-team-table .gw-num span {
+  font: 25px lora;
+  background-color: #FFFFFF;
+  color: #404040;
+}
+
+.gw-num {
+  vertical-align: bottom;
+}
+
+.gw-team-table, .res-table {
+  width: 100%;
+  max-width: 390px;
+  text-align: center;
+  table-layout: fixed;
+  margin: 0 auto;
+}
+
+.gw-team-table {
+    background-image: url("../img/pitch-transparent2.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 40px auto 20px auto;
+    width: 100%;
+}
+
+.res-table {
+  border: 1px dotted #0085a1;
+  background-color: #0085a1;
+  color: #fff;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px){
+  .gw-team-table, .res-table {
+    width: 390px;
+  }
+  .gw-team-table {
+    margin-top: 0;
+  }
+}
+
+.gw-team-table td, .res-table td {
+   padding: 18px 0 18px 0;
+}
+
+/* INTRO HEADER */
+
+.intro-header {
+  background: url('../img/es2-4.jpg') no-repeat center top fixed;
+  margin-bottom: 50px;
+}
+.intro-header .site-heading {
+  padding: 100px 0 50px;
+  color: white;
+  text-align: center;
+}
+
+.intro-header .site-heading h1 {
+  margin-top: 0;
+  font-size: 50px;
+}
+.intro-header .site-heading .subheading {
+  font-size: 24px;
+  line-height: 1.1;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  margin: 10px 0 0;
+  padding: 0 10px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  background-color: rgba(0, 133, 161, 1);
+}
+@media only screen and (min-width: 768px) {
+  .intro-header .site-heading{
+    padding: 150px 0;
+  }
+  .intro-header .site-heading h1 {
+    font-size: 80px;
+  }
+}
+
+/* POST PREVIEW */
+
+.post-preview > a {
+  color: #404040;
+}
+.post-preview > a:hover,
+.post-preview > a:focus {
+  text-decoration: none;
+  color: #0085a1;
+}
+.post-preview > a > .post-title {
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.post-preview > a > .post-subtitle {
+  margin: 0;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.post-preview > .post-meta {
+  color: #808080;
+  font-size: 18px;
+  font-style: italic;
+  margin-top: 0;
+}
+.post-preview > .post-meta > a {
+  text-decoration: none;
+  color: #404040;
+}
+.post-preview > .post-meta > a:hover,
+.post-preview > .post-meta > a:focus {
+  color: #0085a1;
+  text-decoration: underline;
+}
+@media only screen and (min-width: 768px) {
+  .post-preview > a > .post-title {
+    font-size: 36px;
+  }
+  
+}
+
+/* FOOTER */
+
+footer {
+  padding: 30px 0 30px;
+  border-top: 1px solid #eee;
+  margin-top: 20px;
+}
+footer .list-inline {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  position: relative;
+  top: -50px;
+}
+footer .copyright {
+  font-size: 14px;
+  margin-bottom: 0;
+  display: block;
+  vertical-align: middle;
+  text-align: center;
+  position: relative;
+  top: 50px;
+}
+
+@media only screen and (min-width: 768px){
+  footer .list-inline {
+    text-align: right;
+    width: 100%;
+    position: static;
+    top: 0;
+  }
+  footer .copyright {
+    display: table-cell;
+    position: static;
+    top: 0;
+  }
+  footer .row {
+    display: flex;
+    align-items: center;
+  }
+  footer .media-footer-div {
+    float: right;
+    text-align: right;
+  }
+}
