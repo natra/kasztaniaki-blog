@@ -2,17 +2,50 @@
 <html>
 <head>
   <title>Kasztaniaki</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin-ext' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body>
 
+<%= render 'layouts/header' %>
 
+<div class="container">
+      <div class="row">
+          <div class="col-lg-6 col-lg-offset-0 col-md-6 col-md-offset-0 col-sm-8 col-sm-offset-2">
 
-<%= yield %>
+							<%= yield %>
+
+					</div>
+          <div class="col-lg-6 col-lg-offset-0 text-center team-container col-md-6">
+              <table class="gw-team-table">
+                  <tr>
+                      <td></td><td></td><td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /> <span>Unknown</span></td><td colspan="2" class="gw-num"><span>15</td>
+                  </tr>
+                  <tr>
+                      <td></td><td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /> <span>Unknown</span></td><td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /> <span>Unknown</span></td><td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /> <span>Unknown</span></td><td></td>
+                  </tr>
+                  <tr>
+                      <td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /><span>Unknown</span></td><td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /><span>Unknown</span></td><td></td><td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /><span>Unknown</span></td><td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /><span>Unknown</span></td>
+                  </tr>
+                  <tr>
+                      <td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /><span>Unknown</span></td><td></td><td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /><span>Unknown</span></td><td></td><td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /><span>Unknown</span></td>
+                  </tr>
+                  <tr><td></td></tr>
+              </table>
+                  <table class="res-table">
+                      
+                  <tr><td> <span>Unknown</span></td><td><span>Unknown</span></td><td><span>Unknown</span></td><td><span>Unknown</span></td></tr>
+              </table>
+          </div>
+      </div>
+  </div>
+
+  <%= render 'layouts/footer' %>
 
 </body>
 </html>
