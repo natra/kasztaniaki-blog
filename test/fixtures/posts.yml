@@ -3,7 +3,14 @@
 one:
   title: MyString
   content: MyText
+  created_at: <%= 30.minutes.ago %>
 
 two:
   title: MyString
   content: MyText
+  created_at: <%= 15.minutes.ago %>
+
+most_recent:
+  title: MyString
+  content: MyText
+  created_at: <%= Time.zone.now %>
