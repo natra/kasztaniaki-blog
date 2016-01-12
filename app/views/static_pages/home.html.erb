@@ -1,2 +1,21 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<% @posts.each do |post| %>
+
+<div class="post-preview">
+     <%= link_to(post) do %>
+        <h2 class="post-title">
+            <%= post.title %>
+        </h2>
+     <% end %>
+    <p class="post-meta">Opublikował <%= link_to "Rafał Nater", contact_path %> dnia <%= post.created_at.strftime("%d %B, %y") %></p>
+</div>
+<hr>
+
+<% end %>
+<!-- Pager -->
+<ul class="pager">
+    <li class="next">
+    	<%= link_to posts_path do %>
+    		Starsze posty &rarr;
+    	<% end %>
+    </li>
+</ul>

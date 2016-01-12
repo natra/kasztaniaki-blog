@@ -4,7 +4,7 @@ class PostsController < ApplicationController
 	layout 'app2', only: [:show]
 
 	def index
-		@posts = Post.take(3)
+		@posts = Post.take(6)
 	end
 
 	def new
