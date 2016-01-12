@@ -1,7 +1,10 @@
 class PostsController < ApplicationController
 	before_action :find_post, only: [:show, :edit, :update, :destroy]
 
+	layout 'app2', only: [:show]
+
 	def index
+		@posts = Post.take(3)
 	end
 
 	def new
