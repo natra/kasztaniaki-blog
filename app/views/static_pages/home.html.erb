@@ -1,21 +1,55 @@
-<% @posts.each do |post| %>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-0 col-md-6 col-md-offset-0 col-sm-8 col-sm-offset-2">
 
-<div class="post-preview">
-     <%= link_to(post) do %>
-        <h2 class="post-title">
-            <%= post.title %>
-        </h2>
-     <% end %>
-    <p class="post-meta">Opublikował <%= link_to "Rafał Nater", contact_path %> dnia <%= post.created_at.strftime("%d %B, %y") %></p>
+            <% @posts.each do |post| %>
+
+            <div class="post-preview">
+                 <%= link_to(post) do %>
+                    <h2 class="post-title">
+                        <%= post.title %>
+                    </h2>
+                 <% end %>
+                <p class="post-meta">Opublikował <%= link_to "Rafał Nater", contact_path %> dnia <%= post.created_at.strftime("%d %B, %y") %></p>
+            </div>
+            <hr>
+
+            <% end %>
+            <!-- Pager -->
+            <ul class="pager">
+                <li class="next">
+                    <%= link_to posts_path do %>
+                        Starsze posty &rarr;
+                    <% end %>
+                </li>
+            </ul>
+
+        </div>
+        <div class="col-lg-6 col-lg-offset-0 text-center team-container col-md-6">
+            <table class="gw-team-table">
+                  <tr>
+                      <td></td><td></td><td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /> <span>Unknown</span></td><td colspan="2" class="gw-num"><span>15</td>
+                  </tr>
+                  <tr>
+                      <td></td><td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /> <span>Unknown</span></td><td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /> <span>Unknown</span></td><td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /> <span>Unknown</span></td><td></td>
+                  </tr>
+                  <tr>
+                      <td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /><span>Unknown</span></td><td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /><span>Unknown</span></td><td></td><td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /><span>Unknown</span></td><td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /><span>Unknown</span></td>
+                  </tr>
+                  <tr>
+                      <td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /><span>Unknown</span></td><td></td><td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /><span>Unknown</span></td><td></td><td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /><span>Unknown</span></td>
+                  </tr>
+                  <tr><td></td></tr>
+            </table>
+            <table class="res-table">
+                <tr>
+                    <td><span>Unknown</span></td>
+                    <td><span>Unknown</span></td>
+                    <td><span>Unknown</span></td>
+                    <td><span>Unknown</span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </div>
-<hr>
 
-<% end %>
-<!-- Pager -->
-<ul class="pager">
-    <li class="next">
-    	<%= link_to posts_path do %>
-    		Starsze posty &rarr;
-    	<% end %>
-    </li>
-</ul>

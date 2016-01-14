@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
-  layout 'app2', only: [:about, :contact]
+  
+  layout 'admin', only: [:admin]
 
   def home
   	@posts = Post.take(3)
@@ -9,5 +10,9 @@ class StaticPagesController < ApplicationController
   end
 
   def contact
+  end
+
+  def admin
+  	
   end
 end

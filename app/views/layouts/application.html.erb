@@ -14,38 +14,9 @@
 
 <%= render 'layouts/header' %>
 
-<div class="container">
-      <div class="row">
-          <div class="col-lg-6 col-lg-offset-0 col-md-6 col-md-offset-0 col-sm-8 col-sm-offset-2">
+<%= yield %>
 
-							<%= yield %>
-
-					</div>
-          <div class="col-lg-6 col-lg-offset-0 text-center team-container col-md-6">
-              <table class="gw-team-table">
-                  <tr>
-                      <td></td><td></td><td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /> <span>Unknown</span></td><td colspan="2" class="gw-num"><span>15</td>
-                  </tr>
-                  <tr>
-                      <td></td><td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /> <span>Unknown</span></td><td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /> <span>Unknown</span></td><td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /> <span>Unknown</span></td><td></td>
-                  </tr>
-                  <tr>
-                      <td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /><span>Unknown</span></td><td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /><span>Unknown</span></td><td></td><td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /><span>Unknown</span></td><td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /><span>Unknown</span></td>
-                  </tr>
-                  <tr>
-                      <td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /><span>Unknown</span></td><td></td><td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /><span>Unknown</span></td><td></td><td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /><span>Unknown</span></td>
-                  </tr>
-                  <tr><td></td></tr>
-              </table>
-                  <table class="res-table">
-                      
-                  <tr><td> <span>Unknown</span></td><td><span>Unknown</span></td><td><span>Unknown</span></td><td><span>Unknown</span></td></tr>
-              </table>
-          </div>
-      </div>
-  </div>
-
-  <%= render 'layouts/footer' %>
+<%= render 'layouts/footer' %>
 
 </body>
 </html>
