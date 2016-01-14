@@ -1,0 +1,24 @@
+<table class="gw-team-table">
+      <tr>
+          <td></td><td></td><td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /> <span><%= @team_selections.where(position: 0).first.name %></span></td><td colspan="2" class="gw-num"><span>15</td>
+      </tr>
+      <tr>
+          <%= set_team_line(@team_selections.where(position: 1)) %>
+      </tr>
+      <tr>
+          <%= set_team_line(@team_selections.where(position: 2)) %>
+
+      </tr>
+      <tr>
+          <%= set_team_line(@team_selections.where(position: 3)) %>
+
+      </tr>
+      <tr><td></td></tr>
+</table>
+<table class="res-table">
+    <tr>
+      <% @team_selections.where(position: '4').each do |reserve| %>
+        <td><span><%= reserve.name %></span></td>
+      <% end %>
+    </tr>
+</table>
