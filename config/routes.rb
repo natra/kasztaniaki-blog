@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   root 'static_pages#home'
 
   get 'about' => 'static_pages#about'
@@ -7,6 +8,7 @@ Rails.application.routes.draw do
 
   resources :posts
   resources :clubs
+  resources :team_selections
 
 
   # The priority is based upon order of creation: first created -> highest priority.

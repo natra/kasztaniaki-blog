@@ -1,0 +1,31 @@
+<%= form_for @team_selection do |f| %>
+	<% if @team_selection.errors.any? %>
+		<h2><%= pluralize(@team_selection.errors.count, "error") %> prevented this team selection from saving:</h2>
+		<ul>
+			<% @team_selection.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+		</ul>
+
+		<% end %>
+		<div class="form-group">
+			
+		<%= f.label :name %>
+		<%= f.text_field :name, class: 'form-control' %>
+		</div>
+
+		
+		<div class="form-group">
+			<%= f.label :position %>
+			<%= f.text_field :position, class: 'form-control' %>
+	
+		</div>
+		
+		<div class="form-group">
+			<%= f.label :club_id %>
+			<%= f.text_field :club_id, class: 'form-control' %>
+	
+		</div>
+
+		<%= f.submit 'Submit', class: "btn btn-default" %>
+<% end %>
