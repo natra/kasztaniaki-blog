@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
 
   get 'about' => 'static_pages#about'
-
+  get 'admin' => 'static_pages#admin'
   get 'contact' => 'static_pages#contact'
 
   resources :posts
