@@ -94,8 +94,10 @@ hr.black {
 
 /* PAGER */
 
+.pagination a, 
 .pager li > a,
-.pager li > span {
+.pagination em.current,
+span.disabled {
   font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 14px;
   font-weight: 800;
@@ -106,9 +108,29 @@ hr.black {
   color: white;
 }
 
+.pagination a:hover,
+.pagination a:focus, 
 .pager li > a:hover,
 .pager li > a:focus {
   background-color: #0085a1;
+  text-decoration: none;
+}
+
+.pagination a:hover,
+.pagination a:focus {
+  background-color: #ddd;
+} 
+
+.pagination em.current,
+span.disabled {
+  background-color: #ddd;
+  color: #404040;
+}
+
+.pagination a {
+  background-color: white;
+  color: #404040;
+  border: 1px #ddd solid;
 }
 
 .pagination-main {
