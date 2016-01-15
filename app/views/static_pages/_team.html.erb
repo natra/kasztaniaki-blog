@@ -1,6 +1,12 @@
 <table class="gw-team-table">
       <tr>
-          <td></td><td></td><td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /> <span><%= @team_selections.where(position: 0).first.name %></span></td><td colspan="2" class="gw-num"><span>15</td>
+          
+          <% if @team_selections.where(position: 0).length != 0 %>
+            <td></td><td></td><td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /> <span>
+             <%= @team_selections.where(position: 0).first.name %></span></td><td colspan="2" class="gw-num"><span>15</td>
+          <% end %>
+
+         
       </tr>
       <tr>
           <%= set_team_line(@team_selections.where(position: 1)) %>

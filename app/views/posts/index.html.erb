@@ -14,16 +14,18 @@
             <% end %>
         </div>
         <div class="col-lg-5 col-lg-offset-1 col-md-10 col-md-offset-1">
-            <% @posts[3,3].each do |post| %>
-							<div class="post-preview">
-	            	<%= link_to (post) do %>
-	                <h2 class="post-title">
-	                 	<%= post.title %>
-	                </h2>
-	              <% end %>
-              	<p class="post-meta">Opublikował <%= link_to "Rafał Nater", contact_path %> dnia <%= post.created_at.strftime("%d %B, %y") %></p>
-            	</div>
-            	<hr>
+          <% if @posts.length > 3 %>
+              <% @posts[3,3].each do |post| %>
+  							<div class="post-preview">
+  	            	<%= link_to (post) do %>
+  	                <h2 class="post-title">
+  	                 	<%= post.title %>
+  	                </h2>
+  	              <% end %>
+                	<p class="post-meta">Opublikował <%= link_to "Rafał Nater", contact_path %> dnia <%= post.created_at.strftime("%d %B, %y") %></p>
+              	</div>
+              	<hr>
+              <% end %>
             <% end %>
         	</div>
         <div class="pagination-main">
