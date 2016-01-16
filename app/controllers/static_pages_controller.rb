@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-  
+  before_action :authenticate_user!, only: [:admin]
   layout 'admin', only: [:admin]
 
   def home
