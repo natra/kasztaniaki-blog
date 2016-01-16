@@ -27,6 +27,8 @@ gem 'friendly_id', '~> 5.1'
 
 gem 'will_paginate', '~> 3.0', '>= 3.0.7'
 
+gem 'devise', '~> 3.5', '>= 3.5.3'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

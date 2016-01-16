@@ -1,4 +1,5 @@
 class ClubsController < ApplicationController
+	before_action :authenticate_user!
 	before_action :find_club, only: [:show, :edit, :update, :destroy]
 	layout 'admin'
 
@@ -46,7 +47,7 @@ class ClubsController < ApplicationController
 		params.require(:club).permit(:name, :abbrev)
 	end
 
-	def find_post
+	def find_club
 		@club = Club.find(params[:id])
 	end
 

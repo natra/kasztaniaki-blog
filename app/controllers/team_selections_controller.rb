@@ -1,5 +1,5 @@
 class TeamSelectionsController < ApplicationController
-
+	before_action :authenticate_user!
 	before_action :find_team_selection, only: [:show, :edit, :update, :destroy]
 	layout 'admin'
 
