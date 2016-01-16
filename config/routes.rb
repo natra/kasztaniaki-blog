@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get 'admin' => 'static_pages#admin'
   get 'contact' => 'static_pages#contact'
 
+  get '*path' => redirect('/')
+
   resources :posts
   resources :clubs
   resources :team_selections
