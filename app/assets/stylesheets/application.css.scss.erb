@@ -45,18 +45,24 @@ a:focus {
   text-align: center;
 }
 
+hr {
+  max-width: 200px;
+  margin: 17px auto;
+}
+
 hr.white {
   border-width: 4px;
   border-color: white;
-  max-width: 200px;
-  margin: 17px auto;
 }
 
 hr.black {
   border-width: 2px;
   border-color: #0085a1;
-  max-width: 200px;
-  margin: 17px auto;
+}
+
+hr.wider {
+  max-width: 500px;
+  border-width: 1px;
 }
 
 .navbar-custom {
@@ -361,4 +367,13 @@ footer .copyright {
 
 .login .checkbox label {
   padding-left: 0;
+}
+
+/* MESSAGE */
+
+.message form {
+  margin-top: 50px;
+  textarea {
+    height: 21em;
+  }
 }

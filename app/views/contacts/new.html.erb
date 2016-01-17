@@ -1,0 +1,31 @@
+<div class="container message">
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+      <h2 class="text-center">Napisz do mnie!</h2>
+      <hr class="black"></hr>
+      <%= form_for @contact do |f| %>
+        <div class="field form-group">
+          <%= f.label :name, "Imię" %><br />
+          <%= f.text_field :name, required: true, class: 'form-control' %>
+        </div>
+
+        <div class="field form-group">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, required: true, class: 'form-control' %>
+        </div>
+
+        <div class="field form-group">
+          <%= f.label :message, "Wiadomość" %><br />
+          <%= f.text_area :message, as: :text, class: 'form-control' %>
+        </div>
+
+        <div class="hidden">
+          <%= f.label :nickname %>
+          <%= f.text_field :nickname, hint: 'Leave this field blank' %>
+        </div>
+
+        <%= f.submit "Wyślij wiadomość", class: 'btn btn-primary btn-lg' %>
+      <% end %>
+    </div>
+  </div>
+</div>

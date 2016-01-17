@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :posts
   resources :clubs
   resources :team_selections
+  resources :contacts, only: [:create, :new]
 
   get '*path' => redirect('/')
 
