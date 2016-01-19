@@ -15,8 +15,16 @@
           <td><%= club.id %></td>
           <td><%= club.name %></td>
           <td><%= club.abbrev %></td>
-          <td><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></td>
-          <td><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></td>
+          <td>
+            <%= link_to edit_club_path(club) do %>
+              <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+            <% end %>
+          </td>
+          <td>
+            <%= link_to club_path(club), method: 'delete', data: {confirm: 'Are you sure?'} do %>
+              <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+            <% end %>
+          </td>
         </tr>
       <% end %>
     </tbody>

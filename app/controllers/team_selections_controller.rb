@@ -15,7 +15,7 @@ class TeamSelectionsController < ApplicationController
 		@team_selection = TeamSelection.new team_selection_params
 
 		if @team_selection.save
-			redirect_to @team_selection, notice: "Bravo Rafal. That team selection was successfully saved!"
+			redirect_to team_selections_path, notice: "Bravo Rafal. That team selection was successfully saved!"
 		else
 			render 'new', notice: "I was unable to save it."
 		end
@@ -30,7 +30,7 @@ class TeamSelectionsController < ApplicationController
 
 	def update
 		if @team_selection.update team_selection_params
-			redirect_to @team_selection, notice: "Team selection was successfully saved!"
+			redirect_to team_selections_path, notice: "Team selection was successfully saved!"
 		else
 			render 'edit'
 		end

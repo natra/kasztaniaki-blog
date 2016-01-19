@@ -1,4 +1,4 @@
-<h1 class="sub-header">Team Selecions</h1>
+<h1 class="sub-header">Team Selections</h1>
 <table class="table table-striped">
     <thead>
       <tr>
@@ -17,8 +17,16 @@
           <td><%= team_selection.name %></td>
           <td><%= team_selection.position %></td>
           <td><%= team_selection.club_id %></td>
-          <td><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></td>
-          <td><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></td>
+          <td>
+            <%= link_to edit_team_selection_path(team_selection) do %>
+              <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+            <% end %>
+          </td>
+          <td>
+          <%= link_to team_selection_path(team_selection), method: :delete, data: { confirm: 'Are you sure?'} do %>
+            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+          <% end %>
+          </td>
         </tr>
       <% end %>
     </tbody>

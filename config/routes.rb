@@ -6,8 +6,7 @@ Rails.application.routes.draw do
   get 'about' => 'static_pages#about'
   get 'admin' => 'static_pages#admin'
   get 'contact' => 'static_pages#contact'
-
-  
+  get 'posts_admin' => 'posts#index_admin'
 
   resources :posts
   resources :clubs

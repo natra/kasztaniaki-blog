@@ -15,7 +15,7 @@ class ClubsController < ApplicationController
 		@club = Club.new club_params
 
 		if @club.save
-			redirect_to @club, notice: "Bravo Rafal. That club was successfully saved!"
+			redirect_to clubs_path, notice: "Bravo Rafal. That club was successfully saved!"
 		else
 			render 'new', notice: "I was unable to save it."
 		end
@@ -30,7 +30,7 @@ class ClubsController < ApplicationController
 
 	def update
 		if @club.update club_params
-			redirect_to @club, notice: "Club was successfully saved!"
+			redirect_to clubs_path, notice: "Club was successfully saved!"
 		else
 			render 'edit'
 		end

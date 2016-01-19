@@ -1,9 +1,14 @@
 class PostsController < ApplicationController
 	before_action :authenticate_user!, except: [:index, :show]
 	before_action :find_post, only: [:show, :edit, :update, :destroy]
+	layout 'admin', only: [:new, :edit, :index_admin]
 
 	def index
 		@posts = Post.paginate(:page => params[:page], :per_page => 6)
+	end
+
+	def index_admin
+		@posts = Post.paginate(:page => params[:page], :per_page => 20)
 	end
 
 	def new
@@ -37,7 +42,7 @@ class PostsController < ApplicationController
 
 	def destroy
 		@post.destroy
-		redirect_to posts_path
+		redirect_to posts_admin_path
 	end
 
 	private
