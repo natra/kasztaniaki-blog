@@ -6,12 +6,12 @@
       <%= form_for @contact do |f| %>
         <div class="field form-group">
           <%= f.label :name, "Imię" %><br />
-          <%= f.text_field :name, required: true, class: 'form-control' %>
+          <%= f.text_field :name, required: false, class: 'form-control' %>
         </div>
 
         <div class="field form-group">
           <%= f.label :email %><br />
-          <%= f.email_field :email, required: true, class: 'form-control' %>
+          <%= f.email_field :email, required: false, class: 'form-control' %>
         </div>
 
         <div class="field form-group">

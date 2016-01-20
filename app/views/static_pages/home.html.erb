@@ -10,7 +10,7 @@
                         <%= post.title %>
                     </h2>
                  <% end %>
-                <p class="post-meta">Opublikował <%= link_to "Rafał Nater", contact_path %> dnia <%= post.created_at.strftime("%d %B, %y") %></p>
+                <p class="post-meta">Opublikował <%= link_to "Rafał Nater", contact_path %> dnia <%= I18n.l post.created_at, :format => :home %></p>
             </div>
             <hr>
 
