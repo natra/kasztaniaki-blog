@@ -5,6 +5,10 @@
       	<h1><%= @post.title %></h1>
         <hr class="black" />
 				<%== @post.content %>
+        <div class="pub-date">
+          <%= @post.created_at.strftime('%A, %d %B %Y') %>
+        </div>
+        
       </div>       
 			<hr class="black">
 			<%= render 'disqus' %>
