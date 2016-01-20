@@ -13,7 +13,13 @@
  * require_tree .
  * require_self
  */
-
+$main: #244aa8;
+$green: #0085a1;
+$lightblue: #0076EC;
+$darkblue: #0035a1;
+$blue: #4169e1;
+$blue1: #244aa8;
+$bluemv: #08396C;
 
 body {
   font-family: 'Lora', 'Times New Roman', serif;
@@ -38,7 +44,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #0085a1;
+  color: $main;
 }
 
 .notice, .alert {
@@ -57,7 +63,7 @@ hr.white {
 
 hr.black {
   border-width: 2px;
-  border-color: #0085a1;
+  border-color: $main;
 }
 
 hr.wider {
@@ -72,33 +78,33 @@ hr.wider {
   width: 100%;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 800;
-}
-.navbar-custom .nav li a {
-  text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: 1px;
+  .nav li a {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
 }
 @media only screen and (min-width: 768px) {
   .navbar-custom {
     background: transparent;
     border-bottom: 1px solid transparent;
-  }
-  .navbar-custom .navbar-brand {
-    color: white;
-    padding: 20px;
+    .navbar-brand {
+      color: white;
+      padding: 20px;
+    }
+    .nav li a {
+      color: white;
+      padding: 20px 20px 5px 20px;
+    }
   }
   .navbar-custom .navbar-brand:hover,
   .navbar-custom .navbar-brand:focus {
     color: #FFF;
   }
-  .navbar-custom .nav li a {
-    color: white;
-    padding: 20px 20px 5px 20px;
-  }
   .navbar-custom .nav li a:hover,
   .navbar-custom .nav li a:focus {
     color: #FFF;
-    border-bottom: 3px solid  #0085a1;
+    border-bottom: 3px solid  $main;
   }
 }
 
@@ -122,7 +128,7 @@ span.disabled {
 .pagination a:focus, 
 .pager li > a:hover,
 .pager li > a:focus {
-  background-color: #0085a1;
+  background-color: $main;
   text-decoration: none;
 }
 
@@ -135,12 +141,14 @@ span.disabled {
 span.disabled {
   background-color: #ddd;
   color: #404040;
+  font-weight: 300;
 }
 
 .pagination a {
   background-color: white;
   color: #404040;
   border: 1px #ddd solid;
+  font-weight: 300;
 }
 
 .pagination-main {
@@ -161,7 +169,7 @@ span.disabled {
 
 .gw-team-table span {
   
-  background-color: #0085a1;
+  background-color: $main;
   color: #FFFFFF;
   padding: 3px;
 }
@@ -193,8 +201,8 @@ span.disabled {
 }
 
 .res-table {
-  border: 1px dotted #0085a1;
-  background-color: #0085a1;
+  border: 1px dotted $main;
+  background-color: $main;
   color: #fff;
   margin: 0 auto;
 }
@@ -238,7 +246,7 @@ span.disabled {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
-  background-color: rgba(0, 133, 161, 1);
+  background-color: $main;
 }
 @media only screen and (min-width: 768px) {
   .brand-header .site-heading{
@@ -257,7 +265,7 @@ span.disabled {
 .post-preview > a:hover,
 .post-preview > a:focus {
   text-decoration: none;
-  color: #0085a1;
+  color: $main;
 }
 .post-preview > a > .post-title {
   font-size: 30px;
@@ -281,7 +289,7 @@ span.disabled {
 }
 .post-preview > .post-meta > a:hover,
 .post-preview > .post-meta > a:focus {
-  color: #0085a1;
+  color: $main;
   text-decoration: underline;
 }
 @media only screen and (min-width: 768px) {
@@ -290,6 +298,19 @@ span.disabled {
   }
   
 }
+
+/* POST */
+
+.post {
+  h1 {
+    text-align: center;
+  } 
+  hr {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  } 
+}
+
 
 /* FOOTER */
 
@@ -341,6 +362,13 @@ footer .copyright {
 
 .article {
   text-align: justify;
+  hr {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  } 
+  h1 {
+    text-align: center;
+  }
 }
 
 .article img {
@@ -351,6 +379,8 @@ footer .copyright {
 
 .post {
   margin-bottom: 45px;
+   
+  
 }
 
 /* DISQUS */
