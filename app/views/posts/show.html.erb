@@ -8,7 +8,10 @@
         <div class="pub-date">
           <%= I18n.l @post.created_at, :format => :post %>
         </div>
-        
+        <% if user_signed_in? %>
+          <%= link_to "Edit", edit_post_path(@post), class: 'btn-custom' %>
+          <%= link_to "Delete", post_path(@post), method: :delete, class: 'btn-custom', data: {confirm: 'Are you sure?'} %>
+        <% end %>
       </div>       
 			<hr class="black">
 			<%= render 'disqus' %>
