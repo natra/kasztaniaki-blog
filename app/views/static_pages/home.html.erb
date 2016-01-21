@@ -10,7 +10,7 @@
                         <%= post.title %>
                     </h2>
                  <% end %>
-                <p class="post-meta">Opublikował <%= link_to "Rafał Nater", contact_path %> dnia <%= I18n.l post.created_at, :format => :home %></p>
+                <p class="post-meta">Opublikował <%= link_to "Rafał Nater", new_contact_path %> dnia <%= I18n.l post.created_at, :format => :home %></p>
             </div>
             <hr>
 
@@ -23,9 +23,10 @@
                     <% end %>
                 </li>
             </ul>
-
+            <hr class="hr-home">
         </div>
-        <div class="col-lg-6 col-lg-offset-0 text-center team-container col-md-6">
+        
+        <div class="col-lg-6 col-lg-offset-0 text-center team-container col-md-6 col-md-offset-0 col-sm-8 col-sm-offset-2">
             <%= render "team" %>
         </div>
     </div>
