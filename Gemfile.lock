@@ -88,6 +88,7 @@ GEM
       mini_portile2 (~> 2.0.0.rc2)
     orm_adapter (0.5.0)
     pg (0.17.1)
+    puma (2.15.3)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -176,6 +177,7 @@ DEPENDENCIES
   jquery-rails
   mail_form (~> 1.5, >= 1.5.1)
   pg (= 0.17.1)
+  puma
   rails (= 4.2.4)
   rails-settings-cached
   rails_12factor (= 0.0.2)
