@@ -2,20 +2,22 @@
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
       <h2 class="text-center">Napisz do mnie!</h2>
-      <hr class="black"></hr>
+      <hr class="black">
+
       <%= form_for @contact do |f| %>
+        <%= render 'error_messages' %>
         <div class="field form-group">
-          <%= f.label :name, "Imię" %><br />
+          <%= f.label :name, "Imię" %>
           <%= f.text_field :name, required: false, class: 'form-control' %>
         </div>
 
         <div class="field form-group">
-          <%= f.label :email %><br />
-          <%= f.email_field :email, required: false, class: 'form-control' %>
+          <%= f.label :email %>
+          <%= f.text_field :email, required: false, class: 'form-control', novalidate: :novalidate %>
         </div>
 
         <div class="field form-group">
-          <%= f.label :message, "Wiadomość" %><br />
+          <%= f.label :message, "Wiadomość" %>
           <%= f.text_area :message, as: :text, class: 'form-control' %>
         </div>
 

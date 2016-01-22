@@ -1,6 +1,10 @@
 ---
 pl:
   activerecord:
+    attributes:
+      models:
+        contact:
+          name: Nazwa
     errors:
       messages:
         record_invalid: 'Negatywne sprawdzenie poprawności: %{errors}'
@@ -127,7 +131,15 @@ pl:
       second: Sekundy
       year: Rok
   errors:
-    format: "%{attribute} %{message}"
+    format: "%{message}"
+    attributes:
+      name:
+        blank: "Nazwa nie może być pusta"
+      email:
+        blank: "Email nie może być pusty"
+        invalid: "Podany email jest niepoprawny"
+      message:
+        blank: "Wiadomość nie może być pusta"
     messages:
       accepted: musi zostać zaakceptowane
       blank: nie może być puste
@@ -244,3 +256,8 @@ pl:
   will_paginate:
     previous_label: "&#8592; Poprzednia"
     next_label: "Następna &#8594;"
+  error:
+    one: błąd
+    many: "%{count} błędów"
+    few: "%{count} błędy"
+    other: "%{count} błędy"
