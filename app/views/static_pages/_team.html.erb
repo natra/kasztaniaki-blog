@@ -2,7 +2,7 @@
       <tr>
           
           <% if @team_selections.where(position: 0).length != 0 %>
-            <td></td><td></td><td><img alt="Shirt2" src='<%= asset_path 'shirt2.png' %>' /> <span>
+            <td></td><td></td><td><img alt="Shirt2" src='<%= asset_path 'gk.png' %>' /> <span>
              <%= @team_selections.where(position: 0).first.name %></span></td><td colspan="2" class="gw-num"><span><%= Settings.gw %></td>
           <% end %>
 
