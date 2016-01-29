@@ -1,0 +1,20 @@
+<div class="container article">
+	<div class="row">
+		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+			<div class="post">
+				<h1><%= @post.title %></h1>
+        <hr class="black" />
+				<%== @post.content %>
+        <div class="pub-date">
+          <%= I18n.l @post.created_at, :format => :post %>
+        </div>
+        <% if user_signed_in? %>
+          <%= link_to "Edit", edit_post_path(@post), class: 'btn-custom' %>
+          <%= link_to "Delete", post_path(@post), method: :delete, class: 'btn-custom', data: {confirm: 'Are you sure?'} %>
+        <% end %>
+			</div>
+			<hr class="black">
+			<%= render 'posts/disqus' %>
+		</div>
+	</div>
+</div>

@@ -8,6 +8,7 @@ class StaticPagesController < ApplicationController
   end
 
   def about
+    @post = Post.find_by slug: 'historia-kasztaniakow'
   end
 
   def admin

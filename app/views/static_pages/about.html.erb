@@ -1,55 +1,20 @@
+<% if @post %>
+
+	<%= render 'posts/show' %>
+
+<% else %>
+
 <div class="container article">
 	<div class="row">
 		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-
-			<h1>Historia Kasztaniaków</h1>
-			<hr class="black" />
-			<p>
-				Wszystko zaczęło się w 2009 roku, kiedy to po namowach znajomych postanowiłem spróbować swoich sił w najpopularniejszej grze typu fantasy. 
-			</p>
-			<p>
-				Sezon 2009/2010 okazał się dla mnie niezwykle udanym. W pierwszym sezonie udało mi się zająć 7 miejsce w kwalifikacji Polaków z brakiem 5 punktów do podium (miejsce 1397 na świecie). We wszystkich miniligach, w których brałem udział, zapewniłem sobie zwycięstwo już praktycznie na koniec zimy.
-			</p>
-			
-			<%= image_tag(asset_path('fpl0910.png')) %>
-
-			<p>
-				Co przyczyniło się wówczas do sukcesu?
-				<ul>
-					<li>
-						Dobre przygotowanie w okresie zimowym. Ten sezon sowicie wynagrodził ludzi doinformowanych robiących transfery z myślą o kolejnych tygodniach. Śnieżyca przyczyniła się do przełożenia wielu spotkań na inny termin, co skutkowało zarówno okrojonymi kolejkami (nawet o połowęmeczów), jak i podwójnymi później. W kilku słowach – wyśmienita okazja na szybkie zyskanie punktów względem innych.
-					</li> 
-					<li>
-						Kilka udanych typów od pierwszej kolejki (m.in. Bent, Dunne)
-					</li>
-					<li>
-						Cierpliwość - nie zmienianie zdania co do jakości zawodnika po dwóch-trzech nieudanych meczach. 
-					</li>
-					<li>
-						Oraz najważniejsze - fart żółtodzioba :-) 
-					</li>
-				</ul>
-			</p>
-			<p>
-				Ten udany początek nastawił mnie pozytywnie do kontynowania passy.
-			</p>
-			<p>
-				Powielić taktykę z poprzedniego sezonu wspartą o zyskane doświadczenie i zaatakować pierwszy tysiąc na świecie. Taki był plan na sezon 2010 / 2011 (i jak się okazało później, także na kolejne lata).
-			</p>
-			<p>
-				Mimo sporych oczekiwań liczb z 2010 nie udało się uzyskać przez następne trzy lata. Wszystkie  te sezony zakończyłem oscylując wokół 10 000 miejsca – w tym jeden raz rzutem na taśmę w ciągu dwóch ostatnich kolejek awansując o ~9 tysięcy miejsc. 
-			</p>
-
-			<%= image_tag(asset_path('fpl1011.png')) %>
-			<p>
-				Solidny wynik pojawił się rok później. Sezon Liverpoolu. Duet Suareza i Sturridge’a z Rooneyem / Lukaku obok, za ich plecami Yaya, Ramsey, Hazard, Gerrard. W linii obrony niezawodny Coleman, Terry i Koscielny. Suarez jako niekwestionowany kapitan, notujący 295 punktów pomimo absencji w pierwszych 6 spotkaniach. Kasztaniaki na 1973 miejscu overall. Tak zapamiętałem ten sezon. 
-			</p>
-			<p>
-				Piękną sinusoidę złożoną z poprzednich miejsc rankingowych psuje sezon 2014/2015, w którym wylądowałem na 11 961 miejscu. Mocno średnio.
-			</p>
-
-			<%= image_tag(asset_path('fplhistory.png')) %>
-
+			<div class="post">
+				<h1>Wystąpił błąd z wyświetleniem historii Kasztaniaków</h1>
+				<hr class="black" />
+				<p>Proszę, zawiadom autora strony o tym fakcie.</p>
+			</div>
 		</div>
 	</div>
 </div>
+
+<% end %>
+
