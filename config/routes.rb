@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   devise_for :users
   root 'static_pages#home'
 
-  get 'about' => 'static_pages#about'
+  get 'about_team' => 'static_pages#about'
+  get 'about' => 'static_pages#about_blog'
   get 'admin' => 'static_pages#admin'
   get 'contact' => 'static_pages#contact'
   get 'posts_admin' => 'posts#index_admin'
