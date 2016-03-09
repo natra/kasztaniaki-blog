@@ -250,8 +250,8 @@ pl:
       default: "%a, %d %b %Y %H:%M:%S %z"
       long: "%B %d, %Y %H:%M"
       short: "%d %b %H:%M"
-      post: "%A, %d %B %Y"
-      home: "%d %B %Y"
+      post: "%A, %e %B %Y"
+      home: "%e %B %Y"
     pm: po południu
   will_paginate:
     previous_label: "&#8592; Poprzednia"
